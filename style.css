@@ -425,6 +425,53 @@ body {
   background: var(--forest);
   color: var(--white);
 }
+.timeline-details {
+  margin-top: .65rem;
+}
+.timeline-details summary {
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--forest2);
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  letter-spacing: .03em;
+  user-select: none;
+}
+.timeline-details summary::-webkit-details-marker { display: none; }
+.timeline-details summary::before {
+  content: '▸';
+  font-size: .7rem;
+  transition: transform .2s;
+}
+.timeline-details[open] summary::before { transform: rotate(90deg); }
+.timeline-details summary:hover { color: var(--gold); }
+.timeline-details > p {
+  margin-top: .5rem;
+  font-size: .88rem;
+  color: var(--mid);
+  line-height: 1.65;
+  max-width: 42ch;
+}
+
+.cert-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  margin-top: .6rem;
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--forest2);
+  text-decoration: none;
+  letter-spacing: .03em;
+}
+.cert-link::before {
+  content: '↗';
+  font-size: .85rem;
+}
+.cert-link:hover { color: var(--gold); }
 
 /* ── Contact ── */
 .contact {
@@ -460,6 +507,12 @@ body {
   font-size: .8rem;
   color: rgba(255,255,255,.4);
 }
+.footer-link {
+  color: rgba(255,255,255,.6);
+  text-decoration: none;
+  transition: color .2s;
+}
+.footer-link:hover { color: var(--gold); }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {
@@ -477,6 +530,29 @@ body {
   .about-text p { max-width: 100%; }
 
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile: disable GPU-intensive effects for faster paint */
+@media (max-width: 768px) {
+  .hero-blob {
+    animation: none;
+    border-radius: 50%;
+  }
+  .hero-blob::before {
+    display: none;
+  }
+  .nav.scrolled {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(247, 243, 238, .97);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob, .hero-blob::before { animation: none; }
+  .hero-blob { border-radius: 50%; }
+  .hero-blob::before { display: none; }
+  * { transition-duration: 0.01ms !important; }
 }
 
 @media (max-width: 600px) {
