@@ -262,13 +262,13 @@ ul { list-style: none; }
 .world-item > p { margin-top: 1rem; }
 .world-icon {
   display: inline-grid; place-items: center;
-  width: 44px; height: 44px;
-  border-radius: 14px;
-  background: var(--paper); color: var(--ink);
-  border: 1px solid var(--line);
+  width: 52px; height: 52px;
+  border-radius: 16px;
+  background: var(--ink); color: var(--ball);
+  transition: background-color .2s, color .2s;
 }
-.world-icon .icon { width: 26px; height: 26px; }
-.world-item:hover .world-icon { background: var(--ball); border-color: var(--ball); }
+.world-icon .icon { width: 30px; height: 30px; stroke-width: 2; }
+.world-item:hover .world-icon { background: var(--ball); color: var(--ink); }
 .timeline-content > p a { color: var(--ink); font-weight: 600; text-underline-offset: 3px; }
 .world-item h3 {
   font-size: 1.25rem; font-weight: 700; letter-spacing: -.015em;
