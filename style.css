@@ -357,17 +357,29 @@ ul { list-style: none; }
 .contact { text-align: left; }
 .contact-inner { border-top: 1px solid var(--line); padding-top: var(--section); }
 .contact-text { max-width: 46ch; font-size: 1.15rem; margin-top: -1.5rem; }
-.contact-mail {
-  display: inline-block; margin-top: 2rem;
-  font-size: clamp(1.5rem, 4.5vw, 3.25rem);
-  font-weight: 700; letter-spacing: -.035em; color: var(--ink);
-  text-decoration: none;
-  background-image: linear-gradient(var(--ball), var(--ball));
-  background-size: 100% .18em; background-position: 0 92%; background-repeat: no-repeat;
-  transition: background-size .25s;
-  overflow-wrap: anywhere;
+.contact-links {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem;
+  margin-top: 2.5rem; max-width: 760px;
 }
-.contact-mail:hover { background-size: 100% .5em; }
+.contact-links a {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1rem 1.1rem; border-radius: 18px;
+  background: var(--white); border: 1px solid var(--line);
+  text-decoration: none; color: var(--text);
+  transition: border-color .2s, transform .2s;
+}
+.contact-links a:hover { border-color: var(--ink); }
+.contact-icon {
+  flex: none; display: grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 13px;
+  background: var(--ink); color: var(--ball);
+  transition: background-color .2s, color .2s;
+}
+.contact-icon svg { width: 22px; height: 22px; }
+.contact-links a:hover .contact-icon { background: var(--ball); color: var(--ink); }
+.contact-label { display: flex; flex-direction: column; min-width: 0; }
+.contact-label strong { color: var(--ink); font-size: 1rem; }
+.contact-label span { font-size: .9rem; color: var(--muted); overflow-wrap: anywhere; }
 section.contact { padding-top: 0; }
 
 /* ── Footer ── */
@@ -488,6 +500,7 @@ section.contact { padding-top: 0; }
 }
 
 @media (max-width: 560px) {
+  .contact-links { grid-template-columns: 1fr; }
   .post-card a { grid-template-columns: 1fr; }
   .post-card time { grid-row: auto; padding: 0 0 .4rem; }
   .hero { padding-top: 6rem; }
