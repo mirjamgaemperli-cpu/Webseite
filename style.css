@@ -188,12 +188,42 @@ ul { list-style: none; }
 .lead { font-size: 1.2rem; color: var(--ink); }
 
 .facts {
+  grid-column: 1 / -1;
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;
-  margin-top: 2.5rem; padding-top: 1.75rem;
-  border-top: 1px solid var(--line);
+  margin-top: clamp(3rem, 6vw, 4.5rem);
 }
-.facts dt { font-weight: 700; color: var(--ink); font-size: 1.15rem; letter-spacing: -.01em; }
-.facts dd { font-size: .9rem; color: var(--muted); margin-top: .2rem; line-height: 1.4; }
+.fact {
+  position: relative; overflow: hidden;
+  padding: 1.5rem 1.5rem 1.6rem;
+  border-radius: 24px;
+  min-height: 13rem;
+  display: flex; flex-direction: column;
+}
+.fact dt { display: flex; flex-direction: column; }
+.fact-pre { font-size: .9rem; font-weight: 600; opacity: .8; }
+.fact-num {
+  font-size: clamp(3.5rem, 7vw, 5.5rem);
+  font-weight: 800; line-height: 1; letter-spacing: -.055em;
+  margin-top: .4rem;
+}
+.fact dd { margin-top: auto; padding-top: 1.25rem; font-size: .95rem; line-height: 1.4; max-width: 26ch; }
+.fact--ink   { background: var(--ink); color: var(--white); }
+.fact--ink dd { color: rgba(255,255,255,.72); }
+.fact--ball  { background: var(--ball); color: #2c300a; }
+.fact--paper { background: var(--paper); color: var(--ink); border: 1px solid var(--line); }
+.fact--paper dd { color: var(--muted); }
+/* Tennisball-Naht als dezentes Detail */
+.fact--ball::after {
+  content: ''; position: absolute; right: -70px; top: -70px;
+  width: 170px; height: 170px; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.75);
+}
+.fact--ball::before {
+  content: ''; position: absolute; left: -110px; bottom: -130px;
+  width: 170px; height: 170px; border-radius: 50%;
+  border: 3px solid rgba(255,255,255,.75);
+}
+.fact > * { position: relative; z-index: 1; }
 
 .quote {
   align-self: start;
@@ -344,6 +374,7 @@ section.contact { padding-top: 0; }
   .hero-photo { aspect-ratio: 1 / 1; }
   .hero-badge { left: 1rem; bottom: 1rem; }
   .about-grid { grid-template-columns: 1fr; row-gap: 3rem; }
+  .facts { margin-top: 0; }
   .world { grid-template-columns: 1fr 1fr; }
   .world-item:not(:nth-child(3n + 1)) { padding-left: 0; border-left: 0; }
   .world-item:nth-child(2n) { padding-left: clamp(1rem, 2.5vw, 2rem); border-left: 1px solid var(--line); }
@@ -370,7 +401,8 @@ section.contact { padding-top: 0; }
   .hero-photo-wrap { max-width: none; }
   .world { grid-template-columns: 1fr; }
   .world-item, .world-item:nth-child(2n) { padding-left: 0; border-left: 0; }
-  .facts { grid-template-columns: 1fr; gap: 1rem; }
+  .facts { grid-template-columns: 1fr; }
+  .fact { min-height: 0; }
   .timeline::before { left: 4.5rem; }
   .timeline-item { grid-template-columns: 4.5rem 1fr; }
   .timeline-item::before { left: calc(4.5rem - 4px); }
