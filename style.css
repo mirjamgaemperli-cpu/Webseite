@@ -222,6 +222,16 @@ ul { list-style: none; }
   padding-left: clamp(1rem, 2.5vw, 2rem);
   border-left: 1px solid var(--line);
 }
+.world-icon {
+  display: inline-grid; place-items: center;
+  width: 48px; height: 48px; margin-bottom: 1.1rem;
+  border-radius: 14px;
+  background: var(--paper); color: var(--ink);
+  border: 1px solid var(--line);
+}
+.world-icon .icon { width: 26px; height: 26px; }
+.world-item:hover .world-icon { background: var(--ball); border-color: var(--ball); }
+.timeline-content > p a { color: var(--ink); font-weight: 600; text-underline-offset: 3px; }
 .world-item h3 {
   font-size: 1.25rem; font-weight: 700; letter-spacing: -.015em;
   color: var(--ink); margin-bottom: .6rem;
