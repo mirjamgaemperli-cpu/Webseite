@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- VORLAGE: Datei kopieren, umbenennen (z.B. mein-erster-beitrag.html) und die markierten Stellen ersetzen.
+       Die Zeile "robots noindex" im neuen Beitrag löschen. -->
+  <meta name="robots" content="noindex" />
+  <title>Titel des Beitrags · Mirjam Gämperli</title>
+  <meta name="description" content="Ein bis zwei Sätze, worum es im Beitrag geht." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#14213d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="page-blog">
+
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Mirjam Gämperli</a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/#about">Über mich</a></li>
+          <li><a href="/#what-i-do">Was ich mache</a></li>
+          <li><a href="/#education">Werdegang</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contact" class="nav-cta">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <article class="post">
+      <div class="container post-container">
+        <a class="post-back" href="/blog/">Alle Beiträge</a>
+        <header class="post-header">
+          <time datetime="2026-11-01">1. November 2026</time>
+          <h1>Titel des Beitrags</h1>
+          <p class="post-lead">Ein kurzer Einstieg, der neugierig macht und sagt, worum es geht.</p>
+        </header>
+
+        <div class="post-body">
+          <p>Hier beginnt der eigentliche Text. Absätze werden einfach mit p-Tags geschrieben.</p>
+
+          <h2>Eine Zwischenüberschrift</h2>
+          <p>Weiterer Text. Wichtiges kann <strong>fett</strong> markiert werden, und Links sehen <a href="https://techninjas.ch">so</a> aus.</p>
+
+          <ul>
+            <li>Ein Punkt in einer Liste</li>
+            <li>Noch ein Punkt</li>
+          </ul>
+
+          <blockquote><p>Ein Zitat oder ein Gedanke, der hervorgehoben werden soll.</p></blockquote>
+
+          <p>Schluss des Beitrags.</p>
+        </div>
+
+        <footer class="post-footer">
+          <p>Fragen oder Gedanken dazu? Schreib mir an <a href="mailto:mirjam.gaemperli@gmail.com">mirjam.gaemperli@gmail.com</a>.</p>
+          <a class="btn btn-ghost" href="/blog/">Zurück zum Blog</a>
+        </footer>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Mirjam Gämperli</span>
+      <span>Made by <a href="https://techninjas.ch" target="_blank" rel="noopener noreferrer">techninjas.ch</a></span>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>

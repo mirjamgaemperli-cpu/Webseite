@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog · Mirjam Gämperli</title>
+  <meta name="description" content="Gedanken von Mirjam Gämperli zu Projektmanagement, Selbständigkeit, Tennis und Reisen." />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta name="theme-color" content="#14213d" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="page-blog">
+
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="/">Mirjam Gämperli</a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/#about">Über mich</a></li>
+          <li><a href="/#what-i-do">Was ich mache</a></li>
+          <li><a href="/#education">Werdegang</a></li>
+          <li><a href="/blog/" aria-current="page">Blog</a></li>
+          <li><a href="/#contact" class="nav-cta">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <section class="blog-head">
+      <div class="container">
+        <h1 class="blog-title">Blog</h1>
+        <p class="blog-intro">Gedanken zu Projektmanagement, Selbständigkeit, Tennis und Reisen. Geschrieben, wenn mich etwas beschäftigt.</p>
+      </div>
+    </section>
+
+    <section class="blog-list-wrap">
+      <div class="container">
+        <!-- Neue Beiträge zuoberst einfügen. Vorlage für einen Eintrag:
+        <article class="post-card">
+          <a href="/blog/dateiname.html">
+            <time datetime="2026-11-01">1. November 2026</time>
+            <h2>Titel des Beitrags</h2>
+            <p>Ein bis zwei Sätze, worum es geht.</p>
+            <span class="post-more">Weiterlesen</span>
+          </a>
+        </article>
+        -->
+        <div class="post-list">
+          <div class="blog-empty">
+            <span class="ball" aria-hidden="true"></span>
+            <p><strong>Der erste Beitrag ist in Arbeit.</strong><br />Schau bald wieder vorbei.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Mirjam Gämperli</span>
+      <span>Made by <a href="https://techninjas.ch" target="_blank" rel="noopener noreferrer">techninjas.ch</a></span>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
