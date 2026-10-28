@@ -138,12 +138,13 @@ ul { list-style: none; }
   background: var(--line);
 }
 .hero-badge {
-  position: absolute; left: -1.25rem; bottom: 1.75rem;
-  display: inline-flex; align-items: center; gap: .6rem;
-  background: var(--white); color: var(--ink);
-  font-size: .9rem; font-weight: 600;
-  padding: .7rem 1.1rem .7rem .8rem;
-  border-radius: 999px;
+  position: absolute; left: 1rem; bottom: 1rem; max-width: calc(100% - 2rem);
+  display: inline-flex; align-items: center; gap: .55rem;
+  background: rgba(255, 255, 255, .94); color: var(--ink);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  font-size: .82rem; font-weight: 600; line-height: 1.3;
+  padding: .6rem .95rem .6rem .75rem;
+  border-radius: 16px;
   box-shadow: 0 10px 30px -12px rgba(20, 33, 61, .35);
 }
 .ball {
@@ -372,7 +373,6 @@ section.contact { padding-top: 0; }
   .hero-grid { grid-template-columns: 1fr; }
   .hero-photo-wrap { order: -1; max-width: 420px; }
   .hero-photo { aspect-ratio: 1 / 1; }
-  .hero-badge { left: 1rem; bottom: 1rem; }
   .about-grid { grid-template-columns: 1fr; row-gap: 3rem; }
   .facts { margin-top: 0; }
   .world { grid-template-columns: 1fr 1fr; }
