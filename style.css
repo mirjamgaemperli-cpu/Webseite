@@ -138,7 +138,8 @@ ul { list-style: none; }
   background: var(--line);
 }
 .hero-badge {
-  position: absolute; left: 1rem; bottom: 1rem; max-width: calc(100% - 2rem);
+  position: absolute; left: 50%; bottom: 1rem; transform: translateX(-50%);
+  width: max-content; max-width: calc(100% - 2rem);
   display: inline-flex; align-items: center; gap: .55rem;
   background: rgba(255, 255, 255, .94); color: var(--ink);
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
