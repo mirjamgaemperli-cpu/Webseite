@@ -4,154 +4,123 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mirjam Gämperli</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Mirjam Gämperli – Projektmanagerin, Tennisspielerin, Organisationstalent und Weltenbummlerin." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" as="style" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" /></noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <a class="skip" href="#about">Zum Inhalt springen</a>
+
   <!-- Navigation -->
-  <nav class="nav" id="nav">
+  <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="nav-logo" href="#">MG</a>
-      <ul class="nav-links">
-        <li><a href="#about">Über mich</a></li>
-        <li><a href="#what-i-do">Was ich mache</a></li>
-        <li><a href="#education">Werdegang</a></li>
-        <li><a href="#contact">Kontakt</a></li>
-      </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menu öffnen">
-        <span></span><span></span><span></span>
+      <a class="nav-logo" href="#top" aria-label="Zum Seitenanfang">Mirjam Gämperli</a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">Über mich</a></li>
+          <li><a href="#what-i-do">Was ich mache</a></li>
+          <li><a href="#education">Werdegang</a></li>
+          <li><a href="#contact" class="nav-cta">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <p class="hero-eyebrow">Hallo, ich bin</p>
-      <h1 class="hero-name">Mirjam<br /><span>Gämperli</span></h1>
-      <p class="hero-tagline">Projektmanagerin · Tennisspielerin · Organisationstalent · Weltenbummlerin</p>
-      <a href="#what-i-do" class="btn btn-primary">Mehr erfahren</a>
-    </div>
-    <div class="hero-visual">
-      <div class="hero-blob">
-        <picture>
-          <source srcset="mirjam-portrait.webp" type="image/webp" />
-          <img class="hero-photo" src="mirjam-portrait.jpg" alt="Porträt von Mirjam Gämperli" width="800" height="800" fetchpriority="high" />
-        </picture>
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="hero-hello">Hallo, ich bin</p>
+          <h1 class="hero-name">Mirjam<br />Gämperli</h1>
+          <p class="hero-tagline">Projektmanagerin, Tennisspielerin, Organisationstalent und Weltenbummlerin. Ich bringe Struktur in Projekte und Herz in alles, was ich tue.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">Kontakt aufnehmen</a>
+            <a href="#education" class="btn btn-ghost">Werdegang ansehen</a>
+          </div>
+        </div>
+        <figure class="hero-photo-wrap">
+          <picture>
+            <source media="(max-width: 900px)" srcset="mirjam-portrait.webp" type="image/webp" />
+            <source media="(max-width: 900px)" srcset="mirjam-portrait.jpg" />
+            <source srcset="mirjam-portrait-hoch.webp" type="image/webp" />
+            <img class="hero-photo" src="mirjam-portrait-hoch.jpg" alt="Porträt von Mirjam Gämperli am Laptop" width="800" height="1000" fetchpriority="high" />
+          </picture>
+          <figcaption class="hero-badge"><span class="ball" aria-hidden="true"></span>Senior Projektmanagerin bei Selecta</figcaption>
+        </figure>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="section-label">Über mich</div>
-      <h2 class="section-title">Menschen, Projekte<br />und Leidenschaft</h2>
-      <div class="about-grid">
+    <!-- About -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+        <h2 class="section-title">Menschen, Projekte und Leidenschaft</h2>
         <div class="about-text">
-          <p>Ich bin Mirjam – eine Person, die immer in Bewegung ist, sei es auf dem Tennisplatz, unterwegs in der Welt oder mitten in einem spannenden Projekt. Struktur, Kreativität und Enthusiasmus sind meine Werkzeuge.</p>
+          <p class="lead">Ich bin Mirjam – eine Person, die immer in Bewegung ist, sei es auf dem Tennisplatz, unterwegs in der Welt oder mitten in einem spannenden Projekt. Struktur, Kreativität und Enthusiasmus sind meine Werkzeuge.</p>
           <p>Ob ich Turniere organisiere, Teams durch komplexe Projekte führe oder neue Webseiten designe – ich bringe Herz und Präzision in alles, was ich tue.</p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-num">10+</span>
-              <span class="stat-label">Jahre Tennis</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">∞</span>
-              <span class="stat-label">Lust auf neue Projekte</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">🌍</span>
-              <span class="stat-label">Immer unterwegs</span>
-            </div>
-          </div>
+          <dl class="facts">
+            <div><dt>IPMA Level C</dt><dd>Zertifizierte Projektmanagerin</dd></div>
+            <div><dt>10+ Jahre</dt><dd>Tennis mit Leidenschaft</dd></div>
+            <div><dt>Seit 2018</dt><dd>Offizielle bei Swiss Tennis</dd></div>
+          </dl>
         </div>
-        <div class="about-card-wrap">
-          <div class="about-card">
-            <div class="about-card-icon">✦</div>
-            <blockquote>"Gut organisiert ist halb gewonnen – die andere Hälfte ist Leidenschaft."</blockquote>
-          </div>
-        </div>
+        <blockquote class="quote">
+          <p>«Gut organisiert ist halb gewonnen – die andere Hälfte ist Leidenschaft.»</p>
+        </blockquote>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- What I Do -->
-  <section class="section what-i-do" id="what-i-do">
-    <div class="container">
-      <div class="section-label">Was ich mache</div>
-      <h2 class="section-title">Meine Welt</h2>
-      <div class="cards-grid">
-
-        <div class="card card--accent">
-          <div class="card-icon">📋</div>
-          <h3>Projektmanagement</h3>
-          <p>Von der Idee bis zum Abschluss – ich halte Fäden zusammen, setze Prioritäten und bringe Teams ans Ziel. Strukturiert, lösungsorientiert, zuverlässig.</p>
-          <ul class="card-tags">
-            <li>Planung</li><li>Teamführung</li><li>Prozesse</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">🎾</div>
-          <h3>Tennis spielen</h3>
-          <p>Tennis ist mehr als Sport für mich – es ist Leidenschaft, Disziplin und ein unschlagbares Gefühl, wenn der Ball perfekt sitzt. Auf dem Platz gebe ich alles.</p>
-          <ul class="card-tags">
-            <li>Wettkampf</li><li>Training</li><li>Teamgeist</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">🏆</div>
-          <h3>Turniere leiten</h3>
-          <p>Tennisturniere zu organisieren ist meine Art, Leidenschaft und Organisationstalent zu verbinden. Jedes Turnier ist ein Erlebnis – für alle Beteiligten.</p>
-          <ul class="card-tags">
-            <li>Logistik</li><li>Koordination</li><li>Events</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">🗂️</div>
-          <h3>Organisieren</h3>
-          <p>Chaos in Ordnung verwandeln? Das ist mein Element. Ich liebe es, Abläufe zu optimieren, Dinge zu planen und dafür zu sorgen, dass alles reibungslos läuft.</p>
-          <ul class="card-tags">
-            <li>Strukturen</li><li>Effizienz</li><li>Kreativlösungen</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-icon">✈️</div>
-          <h3>Reisen</h3>
-          <p>Neue Kulturen, neue Menschen, neue Perspektiven. Reisen ist meine Art, die Welt zu verstehen und mich selbst immer wieder neu zu entdecken.</p>
-          <ul class="card-tags">
-            <li>Abenteuer</li><li>Kulturen</li><li>Entdecken</li>
-          </ul>
-        </div>
-
-        <div class="card card--accent">
-          <div class="card-icon">🎨</div>
-          <h3>Webseiten designen</h3>
-          <p>Websites sollen nicht nur funktionieren – sie sollen begeistern. Ich gestalte digitale Erlebnisse, die klar, schön und durchdacht sind.</p>
-          <ul class="card-tags">
-            <li>UI/UX</li><li>Design</li><li>Web</li>
-          </ul>
-        </div>
-
+    <!-- What I Do -->
+    <section class="section what-i-do" id="what-i-do">
+      <div class="container">
+        <h2 class="section-title">Was ich mache</h2>
+        <ul class="world">
+          <li class="world-item">
+            <h3>Projektmanagement</h3>
+            <p>Von der Idee bis zum Abschluss – ich halte Fäden zusammen, setze Prioritäten und bringe Teams ans Ziel. Strukturiert, lösungsorientiert, zuverlässig.</p>
+            <ul class="tags"><li>Planung</li><li>Teamführung</li><li>Prozesse</li></ul>
+          </li>
+          <li class="world-item">
+            <h3>Tennis spielen</h3>
+            <p>Tennis ist mehr als Sport für mich – es ist Leidenschaft, Disziplin und ein unschlagbares Gefühl, wenn der Ball perfekt sitzt. Auf dem Platz gebe ich alles.</p>
+            <ul class="tags"><li>Wettkampf</li><li>Training</li><li>Teamgeist</li></ul>
+          </li>
+          <li class="world-item">
+            <h3>Turniere leiten</h3>
+            <p>Tennisturniere zu organisieren ist meine Art, Leidenschaft und Organisationstalent zu verbinden. Jedes Turnier ist ein Erlebnis – für alle Beteiligten.</p>
+            <ul class="tags"><li>Logistik</li><li>Koordination</li><li>Events</li></ul>
+          </li>
+          <li class="world-item">
+            <h3>Organisieren</h3>
+            <p>Chaos in Ordnung verwandeln? Das ist mein Element. Ich liebe es, Abläufe zu optimieren, Dinge zu planen und dafür zu sorgen, dass alles reibungslos läuft.</p>
+            <ul class="tags"><li>Strukturen</li><li>Effizienz</li><li>Kreativlösungen</li></ul>
+          </li>
+          <li class="world-item">
+            <h3>Reisen</h3>
+            <p>Neue Kulturen, neue Menschen, neue Perspektiven. Reisen ist meine Art, die Welt zu verstehen und mich selbst immer wieder neu zu entdecken.</p>
+            <ul class="tags"><li>Abenteuer</li><li>Kulturen</li><li>Entdecken</li></ul>
+          </li>
+          <li class="world-item">
+            <h3>Webseiten designen</h3>
+            <p>Websites sollen nicht nur funktionieren – sie sollen begeistern. Ich gestalte digitale Erlebnisse, die klar, schön und durchdacht sind.</p>
+            <ul class="tags"><li>UI/UX</li><li>Design</li><li>Web</li></ul>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Education -->
-  <section class="section education" id="education">
-    <div class="container">
-      <div class="section-label">Werdegang</div>
-      <h2 class="section-title">Ausbildung &amp;<br />Berufserfahrung</h2>
-      <div class="werdegang-grid">
+    <!-- Education -->
+    <section class="section education" id="education">
+      <div class="container">
+        <h2 class="section-title">Werdegang</h2>
+        <div class="werdegang-grid">
 
         <!-- Ausbildung -->
         <div class="werdegang-col">
@@ -336,24 +305,24 @@
         </div>
 
       </div>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Contact -->
-  <section class="section contact" id="contact">
-    <div class="container contact-inner">
-      <div class="section-label">Kontakt</div>
-      <h2 class="section-title">Lass uns reden</h2>
-      <p class="contact-text">Du hast ein Projekt, eine Idee oder einfach Lust auf ein Gespräch? Ich freue mich darauf.</p>
-      <a href="mailto:mirjam.gaemperli@gmail.com" class="btn btn-primary btn-large">mirjam.gaemperli@gmail.com</a>
-    </div>
-  </section>
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner">
+        <h2 class="section-title">Lass uns reden</h2>
+        <p class="contact-text">Du hast ein Projekt, eine Idee oder einfach Lust auf ein Gespräch? Ich freue mich darauf.</p>
+        <a href="mailto:mirjam.gaemperli@gmail.com" class="contact-mail">mirjam.gaemperli@gmail.com</a>
+      </div>
+    </section>
 
-  <!-- Footer -->
+  </main>
+
   <footer class="footer">
     <div class="container footer-inner">
-      <span class="footer-logo">Mirjam Gämperli</span>
-      <span class="footer-copy">© 2026 · mirjamgaemperli.com · Made by <a href="https://techninjas.ch" target="_blank" rel="noopener noreferrer" class="footer-link">techninjas.ch</a></span>
+      <span>© 2026 Mirjam Gämperli</span>
+      <span>Made by <a href="https://techninjas.ch" target="_blank" rel="noopener noreferrer">techninjas.ch</a></span>
     </div>
   </footer>
 
